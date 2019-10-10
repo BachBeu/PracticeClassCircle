@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp hình tròn</title>
+</head>
+<body>
+<script>
+    //tạo lớp circle với phương thức khởi tạo có 1 tham số
+    let Circle = function (radius) {
+        this.radius = radius;
+        //xây dựng phương thức trả về bán kính của hình tròn
+        this.getRadius = function () {
+            return radius;
+        }
+
+        //xây dựng phương thức tính diện tích hình tròn
+        this.getArea = function () {
+            return Math.PI * radius * radius;
+        }
+
+    }
+    //sử dụng phương thức vừa tạo . tạo đổi tượng hình tròn với bán kính bằng 2
+    let circle = new Circle(2);
+    //truy cập phương thức hình tròn vừa tạo
+    let radius = circle.getRadius();
+    let area = circle.getArea();
+    //hiển thị bán kính và diện tích
+    alert("radius: " + radius + "; area: " + area);
+</script>
+</body>
+</html>
